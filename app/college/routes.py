@@ -69,4 +69,5 @@ def college_delete():
         college_code = request.form['currentRow']
         f = f"DELETE FROM college WHERE `Code` = '{college_code}'"
         mycursor.execute(f)
+        db.commit()
     return college_code
