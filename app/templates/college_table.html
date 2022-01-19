@@ -11,7 +11,7 @@
 					var r = confirm("Confirm deletion?");
 					if (r == true){
 						var currentRow = $(this).closest('tr').find("#college_code").text();
-						$.post('http://127.0.0.1:5000//main_menu/college_table/college_delete', {currentRow}, function(){
+						$.post('http://127.0.0.1:5000/main_menu/college_table/college_delete', {currentRow}, function(){
 						});
 						table.row($(this).parents('tr')).remove().draw();
 					};
